@@ -11,6 +11,7 @@
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: 'Orbitron', sans-serif;
       background-color: #0d1117;
@@ -22,30 +23,49 @@
       min-height: 100vh;
       text-align: center;
       padding: 2rem;
+      animation: fadeIn 1s ease-in;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .container {
       max-width: 800px;
       padding: 2rem;
       background-color: #161b22;
       border-radius: 20px;
       box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+      animation: fadeIn 1.5s ease-in;
     }
+
     .logo {
       width: 100%;
       max-width: 400px;
       margin: 0 auto 20px;
       border-radius: 15px;
       box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      animation: bounceIn 1.2s ease-in-out;
     }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      60% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
     h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
       color: #58a6ff;
     }
+
     p {
       font-size: 1.2rem;
       color: #c9d1d9;
     }
+
     .button {
       margin-top: 2rem;
       padding: 0.75rem 1.5rem;
@@ -55,11 +75,14 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: all 0.3s ease-in-out;
     }
+
     .button:hover {
       background: #2ea043;
+      transform: scale(1.05);
     }
+
     footer {
       margin-top: 2rem;
       font-size: 0.9rem;
@@ -69,8 +92,8 @@
 </head>
 <body>
   <div class="container">
-    <!-- 🔻 Replace this image with your own game logo -->
-    <img src="your-game-image.png" alt="Game Art" class="logo" />
+    <!-- 🔻 Replace this with your uploaded logo filename -->
+    <img src="logo.png" alt="Game Art" class="logo" />
 
     <h1>Polarstudio</h1>
     <p>The home of chilling horror experiences. Dive into twisted environments, face terrifying creatures, and uncover forgotten secrets.</p>
